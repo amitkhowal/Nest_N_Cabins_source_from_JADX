@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/home">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/searchback"
+            android:scaleType="centerCrop"/>
+
+        <SearchView
+            android:layout_marginTop="120dp"
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Here"
+            android:iconifiedByDefault="false"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circular_searchview"
+
+            />
+
+        <TextView
+        android:id="@+id/rtext1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/searchView"
+        android:text="Top Searches in Chandigarh"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@id/rtext1"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="horizontal"
+       >
+
+
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:id="@+id/rtext2"
+        android:layout_below="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:textColor="#0F0606"
+        android:layout_height="45dp"
+        android:text="Top Searches in Delhi"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+
+        />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView1"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@id/rtext2"
+            android:orientation="horizontal">
+        </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
+</ScrollView>
